@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>09b78cba-fd93-4548-802e-7c80319950a3</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>CropPlans.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,11 +22,17 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CropPlans.py" />
+    <Compile Include="main.py" />
+    <Compile Include="googlesheets\SheetsService.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="googlesheets\GoogleSheet.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="googlesheets\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MasterSheetProcessor.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -35,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="googlesheets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="googlesheets\credentials.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

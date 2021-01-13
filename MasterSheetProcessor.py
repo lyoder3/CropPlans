@@ -9,8 +9,8 @@ import csv
 class MasterSheetProcessor:
     """class that receives a master sheet dataframe
     and gets it into the format needed to make crop plans"""
-    BOUNDARY_DIRECTORY = "F:\\FarmDataAutomation\\boundaries"
-    CROP_PLANS_DIRECTORY = "F:\\FarmDataAutomation\\CropPlans"
+    BOUNDARY_DIRECTORY = "F:\\Farm\\FarmDataAutomation\\boundaries"
+    CROP_PLANS_DIRECTORY = "F:\\Farm\\FarmDataAutomation\\CropPlans"
     FARM_REGEX = re.compile(r'^Farm')
     FIELD_REGEX = re.compile(r'^Field')
     GROWER_REGEX = re.compile(r'([HSJ][ORZC])(?=-)')
@@ -69,7 +69,7 @@ class MasterSheetProcessor:
             dir_number = math.floor(i/300)+1
             dir_name = f"Crop Plans {dir_number}"
 
-            full_directory = os.path.join(MasterSheetProcessor.BOUNDARY_DIRECTORY,dir_name)
+            full_directory = os.path.join(MasterSheetProcessor.CROP_PLANS_DIRECTORY,dir_name)
 
             os.makedirs(full_directory,exist_ok=True)
 

@@ -9,7 +9,8 @@ import csv
 class MasterSheetProcessor:
     """class that receives a master sheet dataframe
     and gets it into the format needed to make crop plans"""
-    BOUNDARY_DIRECTORY = "C:\\Users\\loyod\\Desktop\\boundaries"
+    BOUNDARY_DIRECTORY = "F:\\FarmDataAutomation\\boundaries"
+    CROP_PLANS_DIRECTORY = "F:\\FarmDataAutomation\\CropPlans"
     FARM_REGEX = re.compile(r'^Farm')
     FIELD_REGEX = re.compile(r'^Field')
     GROWER_REGEX = re.compile(r'([HSJ][ORZC])(?=-)')

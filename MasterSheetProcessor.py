@@ -116,8 +116,10 @@ class MasterSheetProcessor:
     def write_missing_boundaries_file(self):
         missing_bound_file = os.path.join(MasterSheetProcessor.BOUNDARY_DIRECTORY,"_missing_boundaries.csv")
 
-        with open(missing_bound_file, "w+") as file:
+        with open(missing_bound_file, "w+", newline='') as file:
             writer = csv.writer(file, delimiter=",")
+
+            writer.writerow(["Farm", "Field"])
 
             for row in self.missing_boundaries:
                 writer.writerow(row)

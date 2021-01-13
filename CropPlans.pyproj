@@ -43,7 +43,7 @@
     <Folder Include="googlesheets\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="googlesheets\credentials.json" />
+    <Content Include="environment.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
